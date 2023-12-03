@@ -12,11 +12,17 @@ jobs:
     - name: LaTeX compilation
       uses: xu-cheng/latex-action@master
       with:
-        root_file: "**/*.tex"
-        glob_root_file: true
+        working_directory: AL1
+        root_file: main.tex
+    - name: LaTeX compilation
+      uses: xu-cheng/latex-action@master
+      with:
+        working_directory: MD
+        root_file: main.tex
     - name: Prepare PDFS
       run: |
-        mkdir build && cp *.pdf build/
+        ls -R
+        mkdir build && cp -r AL1/ MD/ build/ && find build/ -type f ! -name '*.pdf' -delete
     - name: Push PDFS to repo
       uses: s0/git-publish-subdir-action@develop
       env:
