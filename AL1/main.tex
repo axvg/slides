@@ -14,10 +14,10 @@
       inner sep=0pt] {%
       \usebeamerfont{footline}
     };
-    \node[%
-      above left=0.35cm and 0cm of current page footer area.south east,
-      anchor=south east,
-      inner sep=0pt]{\qrcode[height=1.5cm]{https://github.com/axvg/presentaciones}};
+    % \node[%
+    %   above left=0.35cm and 0cm of current page footer area.south east,
+    %   anchor=south east,
+    %   inner sep=0pt]{\qrcode[height=1.5cm]{https://github.com/axvg/presentaciones}};
   \end{tikzpicture}
 }
 
@@ -30,14 +30,26 @@
   \tableofcontents[hideallsubsections]
 \end{frame}
 
-\section{Formas cuadraticas}
+\section{Introduccion}
 
-\begin{frame}{Introduccion}
-    \frametitle{A}
-    \lipsum[1-1]
+\begin{frame}{Formas cuadraticas}
+    \frametitle{Formas cuadraticas}
+    \begin{definition}
+      Una forma cuadratica en n variables $x_{1}, x_{2}, . . . , x_{n}$ es una combinacion lineal de los
+      productos $x_{i} x_{j}$, esto es, una combinacion lineal de cuadrados $x_{1}^2 , x_{2}^2 , . . . , x_{n}^2$ y
+      terminos $x_{1}x_{2}, x_{1}x_{3}, . . . , x_{1}x_{n}, x_{2}x_{3}, . . . , x_{2}x_{n}, . . . , x_{n-1}x_{n}$
+    \end{definition}
+
+  \begin{example}
+    \begin{itemize}
+        \item $q = x^2 - y^2 + 4xy$ and $q = x^2 + 3y^2 - 2xy$ are quadratic forms in $x$ and $y$.
+        \item $q = -4x_{21} + x_{22}^2 + 4x_{23} + 6x_{1}x_{3}$ is a quadratic form in $x_{1}, x_{2}$ and $x_{3}$.
+        \item The most general quadratic form in $x_{1}, x_{2}, x_{3}$ is $a_{1}x_{21} + a_{2}x_{22}^2 + a_{3}x_{23} + a_{12}x_{1}x_{2} + a_{13}x_{1}x_{3} + a_{23}x_{2}x_{3}$.
+    \end{itemize}
+  \end{example}
 \end{frame}
 
-\begin{frame}[fragile]{Introduccion}
+\begin{frame}[fragile]{Formas cuadraticas}
     \frametitle{A}
     \lipsum[1-1]
 \end{frame}
