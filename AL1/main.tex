@@ -94,19 +94,13 @@
   \end{equation*}
 \end{frame}
 
-\begin{frame}{Introducción a las Cónicas}
-  \frametitle{Introducción a las Cónicas}
-  En álgebra lineal, las cónicas (elipses, hipérbolas y parábolas) pueden representarse mediante matrices. Vamos a explorar cómo obtener los coeficientes de la forma canónica de estas cónicas utilizando matrices.
-\end{frame}
-
 \section{Secciones Cónicas}
 
 \begin{frame}{Secciones Cónicas}
   \frametitle{Secciones Cónicas}
-  Las secciones cónicas son las curvas no degeneradas generadas por las intersecciones de un plano con una o dos napas de un cono. 
-  Para un plano perpendicular al eje del cono, se produce un círculo. Para un plano que no es perpendicular al eje y que intersecta 
-  solo una napa, la curva producida es una elipse o una parábola. La curva producida por un plano que intersecta ambas napas es una hipérbola. 
-  La elipse y la hipérbola se conocen como cónicas centrales.
+  Se utiliza el término cónica para referirse a todas las curvas que surgen de las diversas intersecciones entre un cono y un plano. 
+  Cuando dicho plano no cruza el vértice, se generan las cónicas específicas: parábola, elipse, hipérbola y circunferencia. 
+  En este proyecto, nos enfocaremos únicamente en las tres primeras. 
   \begin{figure}
     \includegraphics[width=0.5\textwidth, height=0.6\textheight, keepaspectratio]{images/conics.png}
     \caption{Las secciones cónicas: círculo, elipse, parábola y hipérbola}
@@ -126,7 +120,7 @@
     \item un solo punto
     \item una o dos rectas
     \item una elipse
-    \item una hipérbola, o
+    \item una hipérbola
     \item una parábola.
   \end{enumerate}
   La parte de segundo grado de (1), $q(x, y) = ax^2 + bxy + cy^2$ es una forma cuadrática. Esto determina el tipo de la cónica.
@@ -172,6 +166,94 @@
     \item una hipérbola si $\lambda_1\lambda_2 < 0$,
     \item una parábola si $\lambda_1\lambda_2 = 0$.
   \end{itemize}
+\end{frame}
+
+\begin{frame}{Parábola}
+  \frametitle{Parábola}
+  Una parábola es el lugar geométrico de un punto que se mueve en un plano de tal manera que su distancia a una recta fija, llamada directriz, situada en el mismo plano, 
+  es siempre igual a su distancia a un punto fijo del plano, llamado foco, y que no pertenece a la recta.
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \includegraphics[width=\textwidth, height=0.6\textheight, keepaspectratio]{images/par1.png}
+        \caption{Parábola y elementos}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Eje Focal: es la recta que pasa por el foco y el vértice
+        \item Foco (F): es el punto fijo que se indica en la definición
+        \item Directriz: es la recta fija mencionada en la definición
+        \item Vértice (V): es el punto donde el eje focal corta la parábola
+        \item Distancia focal (p): es la distancia desde el vértice al foco y del vértice a la directriz.
+        \item Lado Recto (ST): es el segmento perpendicular al eje focal, que pasa por el foco F, cuyos extremos son dos puntos de la parábola.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Parámetros de la Parábola}
+  \frametitle{Parámetros de la Parábola}
+
+  \begin{table}[]
+    \begin{tabular}{|l|l|l|}
+    \hline
+    & Parábola de eje vertical & Parábola de eje horizontal \\ \hline
+    Ecuación General & $Ax^2 + Dx + Ey + F = 0$ & $Cy^2 + Dx + Ey + F = 0$ \\ 
+    & $C = 0, A\neq0$ & $A = 0, C\neq 0$ \\ \hline
+    Ecuación canónica & $(x-h)^2 = 4p(y-k)$ & $(y-k)^2 = 4p(x-h)$ \\ \hline
+    Coordenadas del Vértice & $(h, k)$ & $(h, k)$ \\ \hline
+    Coordenadas del Foco & $(h, k+p)$ & $(h+p, k)$ \\ \hline
+    Ecuación de la Directriz & $y=k-p$ & $x=h-p$ \\ \hline
+    Ecuación del eje focal & $x=h$ & $y=k$ \\ \hline
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+\begin{frame}{Elipse}
+  \frametitle{Elipse}
+    Una elipse es el conjunto de todos los puntos en un plano cuya distancia a dos puntos fijos en el plano tienen una suma constante. 
+    Los puntos fijos son los focos de la elipse. La recta que une los focos es el eje focal. El punto sobre el eje focal que está en el 
+    punto medio entre los dos focos es el centro. Los puntos donde la elipse interseca a su eje son los vértices de la elipse.
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \begin{tikzpicture}
+          \draw (0,0) ellipse (2cm and 1cm);
+          \fill (0,0) circle (2pt) node[below] {C (h,k)};
+          \fill (-2,0) circle (2pt) node[below] {F1};
+          \fill (2,0) circle (2pt) node[below] {F2};
+          \draw (-2,0) -- (2,0) node[midway,above] {a};
+          \draw (0,-1) -- (0,1) node[midway,right] {b};
+        \end{tikzpicture}
+        \caption{Elipse y elementos}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Eje Mayor: es el segmento que pasa por los focos y los vértices de la elipse
+        \item Eje Menor: es el segmento perpendicular al eje mayor en el centro de la elipse
+        \item Focos (F): son los dos puntos fijos en la definición de la elipse
+        \item Vértices (V): son los puntos donde el eje mayor corta la elipse
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Parámetros de la Elipse}
+  \frametitle{Parámetros de la Elipse}
+  \begin{table}[]
+    \begin{tabular}{|l|l|}
+    \hline
+    Ecuación General & $Ax^2 + Cy^2 + Dx + Ey + F = 0$ \\ 
+    & $A = C, A\neq0$ \\ \hline
+    Ecuación canónica & $\frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2} = 1$ \\ \hline
+    Coordenadas del Centro & $(h, k)$ \\ \hline
+    Coordenadas de los Focos & $(h \pm c, k)$, $c = \sqrt{a^2 - b^2}$ \\ \hline
+    Ecuaciones de los ejes & Eje mayor: $y=k$, Eje menor: $x=h$ \\ \hline
+    \end{tabular}
+  \end{table}
 \end{frame}
 
 \begin{frame}{Bibliografia}
