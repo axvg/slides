@@ -219,24 +219,10 @@
     punto medio entre los dos focos es el centro. Los puntos donde la elipse interseca a su eje son los vértices de la elipse.
   \begin{columns}
     \begin{column}{0.5\textwidth}
-      \resizebox{\textwidth}{!}{%
-        \begin{tikzpicture}[dot/.style={draw,fill,circle,inner sep=1pt}]
-          \def\a{4}
-          \def\b{3}
-          \def\angle{-45}
-          \draw (0,0) ellipse ({\a} and {\b});
-          \draw (-\a,0) coordinate[label={left:$A$}] (A)
-            -- (\a,0) coordinate[label={right:$B$}] (B);
-          \draw (0,-\b) coordinate[label={below:$D$}] (D)
-            -- (0,\b) coordinate[label={above:$C$}] (C);
-          \coordinate[label={below right:$S(p,q)$}] (O) at (0,0);
-          \node[dot,label={below:$F_1$}] (F1) at ({-sqrt(\a*\a-\b*\b)},0) {};
-          \node[dot,label={below:$F_2$}] (F2) at ({+sqrt(\a*\a-\b*\b)},0) {};
-          \node[dot,label={\angle:$X$}] (X) at (\angle:{\a} and {\b}) {};
-          \draw (F1) -- (X) (X) -- (F2);
-          \draw[decorate,decoration=brace,draw=red] (C) -- (O);
-        \end{tikzpicture}%
-      }
+      \begin{figure}
+        \includegraphics[width=\textwidth, height=0.6\textheight, keepaspectratio]{images/eli1.png}
+        \caption{Parábola y elementos}
+      \end{figure}
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
@@ -258,7 +244,7 @@
     & Elipse de eje horizontal & Elipse de eje vertical \\ \hline
     Ecuación General & \multicolumn{2}{c|}{$Ax^2 + Cy^2 + Dx + Ey + F = 0$} \\ \hline
     Condiciones & \multicolumn{2}{c|}{\parbox{8cm}{Con $A$ y $C$ no ambas cero, mismo valor numérico. $B = 0$ (Sin rotación de ejes)}} \\ \hline
-    Ecuación canónica & \multicolumn{2}{c|}{$\frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2} = 1$} \\ \hline
+    Ecuación canónica & \multicolumn{2}{c|}{\rule{0pt}{2.5ex}$\frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2} = 1$} \\ \hline
     Localización de los focos & $(h \pm c, k)$ & $(h, k \pm c)$ \\ \hline
     Localización de los vértices & $(h \pm a, k)$ & $(h, k \pm a)$ \\ \hline
     Ecuación del eje mayor & $y=k$ & $x=h$ \\ \hline
@@ -278,31 +264,8 @@
     \begin{columns}
       \begin{column}{0.5\textwidth}
         \begin{figure}
-          \resizebox{\textwidth}{!}{%
-            \begin{tikzpicture}[scale=0.3]
-              \pgfmathsetmacro{\e}{1.4}   % eccentricity
-              \pgfmathsetmacro{\a}{1}
-              \pgfmathsetmacro{\b}{(\a*sqrt((\e)^2-1))} 
-              \draw plot[domain=-2:2] ({\a*cosh(\x)},{\b*sinh(\x)});
-              \draw plot[domain=-2:2] ({-\a*cosh(\x)},{\b*sinh(\x)});
-              \draw[thick, ->] (-6,0) -- (6,0) node[right]{$x$};
-              \draw[thick, ->] (0,-4.5) -- (0,4.5) node[above]{$y$};
-              \draw[dashed] (4,4) -- (-4,-4);
-              \draw[dashed] (-4,4) -- (4,-4);
-              \draw[dashed] (-0.7,0.7) -- (0.7,0.7) -- (0.7,-0.7) -- (-0.7,-0.7) -- (-0.7,0.7);
-              \draw (0,2.5) node[right]{$F_1(c,0)$};
-              \draw (0,-2.5) node[right]{$F_2(-c,0)$};
-              \draw [fill=black] (0,2.5) circle (1.5pt);
-              \draw [fill=black] (0,-2.5) circle (1.5pt);
-              \draw [fill=black] (0,-1) circle (1.5pt);
-              \draw [fill=black] (0,1) circle (1.5pt);
-              \draw (4,4) node[above right]{$y=\dfrac{b}{a}x$};
-              \draw (-3,4) node[above left]{$y=-\dfrac{b}{a}x$};
-              \draw (0,1) node[above right]{\scriptsize $v_1(a,0)$};
-              \draw (0,-1.2) node[below right]{\scriptsize $v_2(-a,0)$};
-          \end{tikzpicture}%
-          }
-          \caption{Hipérbola y sus elementos}
+          \includegraphics[width=\textwidth, height=0.6\textheight, keepaspectratio]{images/hyp1.png}
+          \caption{Parábola y elementos}
         \end{figure}
       \end{column}
       \begin{column}{0.5\textwidth}
@@ -325,7 +288,7 @@
     & Hipérbola de eje horizontal & Hipérbola de eje vertical \\ \hline
     Ecuación General & \multicolumn{2}{c|}{$Ax^2 - Cy^2 + Dx + Ey + F = 0$} \\ \hline
     Condiciones & \multicolumn{2}{c|}{\parbox{8cm}{Con $A$ y $C$ no ambas cero, distinto valor numérico y signos contrarios. $B = 0$ (Sin rotación de ejes)}} \\ \hline
-    Ecuación canónica & \multicolumn{2}{c|}{$\frac{(x-h)^2}{a^2} - \frac{(y-k)^2}{b^2} = 1$} \\ \hline
+    Ecuación canónica & \multicolumn{2}{c|}{\rule{0pt}{2.5ex}$\frac{(x-h)^2}{a^2} - \frac{(y-k)^2}{b^2} = 1$} \\ \hline
     Localización de los focos & $(h \pm c, k)$ & $(h, k \pm c)$ \\ \hline
     Localización de los vértices & $(h \pm a, k)$ & $(h, k \pm a)$ \\ \hline
     Ecuación del eje focal & $y=k$ & $x=h$ \\ \hline
@@ -338,11 +301,134 @@
   \end{table}
 \end{frame}
 
+\begin{frame}{Ejercicio 1:}
+  \frametitle{Ejercicio 1:}
+  \begin{block}{Ejercicio}
+    En el plano afín dada la cónica de ecuación:
+    \[x^2 - 2xy + y^2 + 4x + 1 = 0\]
+    (i) Clasificar la cónica.
+  \end{block}
+    La matriz asociada a la cónica y de términos cuadráticos son respectivamente:
+    \[A = \begin{pmatrix} 1 & -1 & 2 \\ -1 & 1 & 0 \\ 2 & 0 & 1 \end{pmatrix}, T = \begin{pmatrix} 1 & -1 \\ -1 & 1 \end{pmatrix}.\]
+    Se tiene que det(A) = -4 y det(T) = 0. Se trata por tanto de una parábola.
+\end{frame}
+
+\begin{frame}{Ejercicio 1: (Continuación)}
+  \frametitle{Ejercicio 1: (Continuación)}
+    (ii) Hallar su centro, ejes, vértices y asíntotas.
+    Dado que es una parábola, no tiene ni centro ni asíntotas.
+    El eje es la línea polar del autovector asociado al autovalor no nulo de T.
+    El polinomio característico de T es:
+    \[|T - \lambda Id| = (1 - \lambda)^2 - 1^2 = \lambda^2 - 2\lambda = \lambda(\lambda - 2).\]
+    Por lo tanto, el autovalor no nulo es $\lambda_1 = 2$. Sus autovectores asociados verifican
+    \[(T - 2Id) \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \Leftrightarrow -x - y = 0\]
+    Por lo tanto, $S_2 = L\{(1, -1)\}$.
+    El eje será la línea polar del vector (1, -1):
+    \[(1, -1, 0) A \begin{pmatrix} x \\ y \\ 1 \end{pmatrix} = 0 \Leftrightarrow 2x - 2y + 2 = 0 \Leftrightarrow x - y + 1 = 0.\]
+\end{frame}
+
+\begin{frame}{Ejercicio 1: (Continuación)}
+  \frametitle{Ejercicio 1: (Continuación)}
+    (iii) Calcular su ecuación reducida, excentricidad y distancia del vértice al foco.
+    Por ser una parábola la excentricidad es e = 1.
+    La ecuación reducida es de la forma:
+    \[\lambda_1x''^2 - 2cy'' = 0 \Leftrightarrow 2x''^2 - 2cy'' = 0,\]
+    donde
+    \[c = \sqrt{-\frac{|A|}{\lambda_1}} = \sqrt{2}.\]
+    La ecuación reducida queda:
+    \[x''^2 - \sqrt{2}y'' = 0. (*)\]
+\end{frame}
+
+\begin{frame}{Ejercicio 1: (Continuación)}
+  \frametitle{Ejercicio 1: (Continuación)}
+    Ahora sabemos que cuando está expresada de la forma $x^2 = 2py$ el foco está en el punto $(0, p/2)$ y el vértice en el origen. Por tanto la distancia focal es $p/2$. En nuestro caso si reescribimos:
+    \[x''^2 - \frac{2\sqrt{2}}{2}y'' = 0,\]
+    vemos que $p = \sqrt{2}/2$ y así la distancia del vértice al foco es $p/2 = \sqrt{2}/4$.
+\end{frame}
+
+\begin{frame}{Ejercicio 2: (Continuación)}
+  \frametitle{Ejercicio 2: (Continuación)}
+  \begin{block}{Ejercicio}
+  Para cada número real a definimos la cónica de ecuación:
+  \[9x^2 + ay^2 - 6axy + 3a - 12 = 0.\]
+  (i) Clasificar las cónicas dependiendo de los valores de a.
+  \end{block}
+  La matriz asociada a la cónica y de términos cuadráticos son respectivamente:
+  \[A = \begin{pmatrix} 9 & -3a & 0 \\ -3a & a & 0 \\ 0 & 0 & 3a - 12 \end{pmatrix}, T = \begin{pmatrix} 9 & -3a \\ -3a & a \end{pmatrix}.\]
+  Vemos que:
+  \[|A| = (3a - 12)(9a - 9a^2) = 27a(a - 4)(1 - a), |T| = 9a - 9a^2 = 9a(1 - a).\]
+  Los puntos donde se anulan son a = 0, 1, 4. Estudiamos los siguientes casos:
+\end{frame}
+
+\begin{frame}{Ejercicio 2: (Continuación)}
+  \frametitle{Ejercicio 2: (Continuación)}
+  \begin{enumerate}[label=(\roman*)]
+    \item $a < 0$. Se tiene que $|T| < 0$ y $|A| > 0$. Se trata de una hipérbola.
+    \item $a = 0$. Se tiene que $|T| = 0$ y $|A| = 0$. Se trata de rectas paralelas reales o imaginarias o coincidentes.
+  \end{enumerate}
+  En particular la ecuación queda:
+  \[9x^2 - 12 = 0 \Leftrightarrow (3x - \sqrt{12})(3x + \sqrt{12}) = 0.\]
+  Es decir se tratan de rectas paralelas reales.
+\end{frame}
+
+\begin{frame}{Ejercicio 2: (Continuación)}
+  \frametitle{Ejercicio 2: (Continuación)}
+  \begin{enumerate}[label=(\roman*),start=3]
+    \item $0 < a < 1$. Se tiene que $|T| > 0$ y $|A| < 0$. Se trata de una elipse real.
+    \item $a = 1$. Se tiene que $|T| = 0$ y $|A| = 0$. Se trata de rectas paralelas reales o imaginarias o coincidentes.
+  \end{enumerate}
+  La matriz asociada queda:
+  \[A = \begin{pmatrix} 9 & -3 & 0 \\ -3 & 1 & 0 \\ 0 & 0 & -9 \end{pmatrix}.\]
+  Haciendo congruencia:
+  \[A = \begin{pmatrix} 9 & -3 & 0 \\ -3 & 1 & 0 \\ 0 & 0 & -9 \end{pmatrix} \rightarrow \begin{pmatrix} 9 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & -9 \end{pmatrix}\]
+  y vemos que de nuevo se tratan de rectas paralelas reales.
+\end{frame}
+
+\begin{frame}{Ejercicio 2: Continuación}
+  \frametitle{Ejercicio 2: Continuación}
+  \begin{enumerate}[label=(\roman*),start=5]
+    \item $1 < a < 4$. Se tiene que $|T| < 0$ y $|A| > 0$. Se trata de una hipérbola.
+    \item $a = 4$. Se tiene que $|T| < 0$ y $|A| = 0$. Se tratan de rectas reales cortándose en un punto.
+    \item $a > 4$. Se tiene que $|T| < 0$ y $|A| < 0$. Se trata de una hipérbola.
+  \end{enumerate}
+
+  \begin{block}{Ejercicio}
+  (ii) En aquellos casos en los que las cónicas sean degeneradas escribir las ecuaciones de las rectas que las forman.
+  \end{block}
+  - Para a = 0. La ecuación es:
+  \[9x^2 - 12 = 0 \Leftrightarrow (3x - \sqrt{12})(3x + \sqrt{12}) = 0.\]
+  Luego el par de rectas paralelas son:
+  \[3x - \sqrt{12} = 0, 3x + \sqrt{12} = 0.\]
+\end{frame}
+
+\begin{frame}{Ejercicio 2: Continuación}
+  \frametitle{Ejercicio 2: Continuación}
+  - Para a = 1. Sabemos que se trata de rectas paralelas a la recta de centros. Esta viene dada por la ecuación:
+  \[(x, y, 1)A = (0, 0, h) \Leftrightarrow 9x - 3y = 0 \Leftrightarrow 3x - y = 0.\]
+  Las rectas por tanto son de la forma 3x - y + c = 0. Por otra parte si intersecamos la cónica con la recta x = 0 queda:
+  \[y^2 = 9 \Leftrightarrow y = \pm\sqrt{9}.\]
+  Por tanto el punto (0, 3) pertenece a una paralela y (0, -3) a la otra. Deducimos que tales rectas son:
+  \[3x - y + 3 = 0, 3x - y - 3 = 0.\]
+  - Para a = 4 el par de rectas cortándose pasa por el centro que cumple:
+  \[(x, y, 1)A = (0, 0, h) \Leftrightarrow 9x - 12y = 0 \Leftrightarrow -12x + 9y = 0.\]
+  Resolviendo el centro es (x, y) = (0, 0). Cortamos ahora la cónica con la recta x = 1 y obtenemos:
+  \[9 + 4y^2 - 24y = 0\]
+\end{frame}
+
+\begin{frame}{Ejercicio 2: Continuación}
+  \frametitle{Ejercicio 2: Continuación}
+  de donde:
+  \[y = 3 \pm \frac{3\sqrt{3}}{2}\]
+  Las rectas buscadas pasan por el origen y respectivamente por los puntos $(1, 3+3\sqrt{3}/2)$ y $(1, 3-3\sqrt{3}/2)$.
+  Quedan:
+  \[(6 + 3\sqrt{3})x - 2y = 0, (6 - 3\sqrt{3})x - 2y = 0.\]
+\end{frame}
+
 \begin{frame}{Bibliografia}
   \begin{itemize}
     \item \faGlobe\, Applications of Linear Algebra in Various Fields (Part-1): \url{https://www.researchgate.net/publication/356818396_Applications_of_Linear_Algebra_in_Various_Fields_Part-1}
-    \item \faBook\, Álgebra lineal y geometría cartesiana - Juan de Burgos Román
-    \item \faBook\, Practical Linear Algebra: A Geometry Toolbox - Gerald Farin, Dianne Hansford
+    \item \faBook\, J. de Burgos. Álgebra lineal y geometría cartesiana. McGraw Hill 2a Ed. (2000)
+    \item \faBook\, G. Farin, D. Hansford. Practical Linear Algebra: a geometry toolbox. A.K. Peters (2005).
   \end{itemize}
 \end{frame}
 
