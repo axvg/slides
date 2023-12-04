@@ -1,55 +1,104 @@
-\documentclass{beamer}
+\documentclass[xcolor={dvipsnames},aspectratio=169,10pt]{beamer}
 
-\usepackage{lipsum}
+\input{preamble.tex}
 
-\title{Obtención de los Coeficientes de la forma canónica para la Elipse, hipérbolas y parábolas. \newline
-Determinación analítica de las cónicas}
+\title{Obtención de los Coeficientes de la forma canónica para la Elipse, hipérbolas y parábolas}
+\subtitle{Determinación analítica de las cónicas}
 \author{Grupo 12}
-\date{\today}
-
-\usetheme{Copenhagen}
+\date{December 05, 2023}
+\titlegraphic{
+  \begin{tikzpicture}[overlay, remember picture]
+    \node[%
+      above right=0.35cm and -0.2cm of current page footer area.south west,
+      anchor=south west,
+      inner sep=0pt] {%
+      \usebeamerfont{footline}
+    };
+    \node[%
+      above left=0.35cm and 0cm of current page footer area.south east,
+      anchor=south east,
+      inner sep=0pt]{\qrcode[height=1.5cm]{https://github.com/axvg/presentaciones}};
+  \end{tikzpicture}
+}
 
 \begin{document}
-\maketitle
 
-\begin{frame}{Contenido}
-    \setbeamertemplate{section in toc}[sections numbered]
-    \tableofcontents[hideallsubsections]
+\maketitle%
+
+\begin{frame}{Contenidos}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents[hideallsubsections]
 \end{frame}
 
-\section{Introducción}
-\begin{frame}
-    \frametitle{Descripción}
-    Este proyecto se dedica exclusivamente a la "Definición de
-    Cónica y su ecuación general interpretación geométrica.".....
-\end{frame}
+\section{Formas cuadraticas}
 
-\begin{frame}
-    \frametitle{Conceptos}
+\begin{frame}{Introduccion}
+    \frametitle{A}
     \lipsum[1-1]
 \end{frame}
 
-\section{Aplicaciones}
-\begin{frame}
-    \frametitle{Aplicaciones}
+\begin{frame}[fragile]{Introduccion}
+    \frametitle{A}
     \lipsum[1-1]
 \end{frame}
 
-\section{Ejercicio}
-\begin{frame}
-    \frametitle{Ejercicio}
+\begin{frame}{2}
+    \frametitle{A}
     \lipsum[1-1]
 \end{frame}
 
-\section{Bibliografia}
+\begin{frame}{3}
+    \frametitle{A}
+    \lipsum[1-1]
+\end{frame}
+
+\section{Seccion 2}
+
+\begin{frame}[fragile]{2.1}
+    \frametitle{A}
+    \lipsum[1-1]
+\end{frame}
+
+\begin{frame}[fragile]{2.2}
+    \frametitle{A}
+    \lipsum[1-1]
+\end{frame}
+
+
+\begin{frame}[fragile]{2.3}
+    \frametitle{A}
+    \lipsum[1-1]
+\end{frame}
+
+\begin{frame}[fragile]{2.4}
+    \frametitle{A}
+    \lipsum[1-1]
+\end{frame}
+
+\section{Seccion3}
+
+\begin{frame}[fragile]{IX}
+    \frametitle{A}
+    \lipsum[1-1]
+\end{frame}
+
+% \begin{noindent}
+\begin{frame}[fragile]{X}
+    \frametitle{A}
+    \lipsum[1-1]
+\end{frame}
+% \end{noindent}
+
 \begin{frame}{Bibliografia}
-\begin{itemize}
-    \item Libro~\LaTeX: \url{https://en.wikibooks.org/wiki/LaTeX}
-    \item Libro 2
-    \item Libro 3
-    \item Libro 4
-    \item \alert{Google}
-\end{itemize}
+  \begin{itemize}
+    \item Applications of Linear Algebra in Various Fields (Part-1): \url{https://www.researchgate.net/publication/356818396_Applications_of_Linear_Algebra_in_Various_Fields_Part-1}
+    \item Álgebra lineal y geometría cartesiana - Juan de Burgos Román
+    \item Practical Linear Algebra: A Geometry Toolbox - Gerald Farin, Dianne Hansford
+  \end{itemize}
 \end{frame}
-  
+
+\begin{frame}[standout]
+  Gracias \\
+\end{frame}
+
 \end{document}
