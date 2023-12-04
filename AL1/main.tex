@@ -181,7 +181,8 @@
       \end{figure}
     \end{column}
     \begin{column}{0.5\textwidth}
-      \begin{itemize}
+      \begin{itemize}\tiny
+        \itemsep0em
         \item Eje Focal: es la recta que pasa por el foco y el vértice
         \item Foco (F): es el punto fijo que se indica en la definición
         \item Directriz: es la recta fija mencionada en la definición
@@ -197,7 +198,7 @@
   \frametitle{Parámetros de la Parábola}
 
   \begin{table}[]
-    \begin{tabular}{|l|l|l|}
+    \begin{tabular}{|c|c|c|}
     \hline
     & Parábola de eje vertical & Parábola de eje horizontal \\ \hline
     Ecuación General & $Ax^2 + Dx + Ey + F = 0$ & $Cy^2 + Dx + Ey + F = 0$ \\ 
@@ -218,17 +219,22 @@
     punto medio entre los dos focos es el centro. Los puntos donde la elipse interseca a su eje son los vértices de la elipse.
   \begin{columns}
     \begin{column}{0.5\textwidth}
-      \begin{figure}
-        \begin{tikzpicture}
-          \draw (0,0) ellipse (2cm and 1cm);
-          \fill (0,0) circle (2pt) node[below] {C (h,k)};
-          \fill (-2,0) circle (2pt) node[below] {F1};
-          \fill (2,0) circle (2pt) node[below] {F2};
-          \draw (-2,0) -- (2,0) node[midway,above] {a};
-          \draw (0,-1) -- (0,1) node[midway,right] {b};
-        \end{tikzpicture}
-        \caption{Elipse y elementos}
-      \end{figure}
+      \begin{tikzpicture}[dot/.style={draw,fill,circle,inner sep=1pt}]
+        \def\a{4}
+        \def\b{3}
+        \def\angle{-45}
+        \draw (0,0) ellipse ({\a} and {\b});
+        \draw (-\a,0) coordinate[label={left:$A$}] (A)
+          -- (\a,0) coordinate[label={right:$B$}] (B);
+        \draw (0,-\b) coordinate[label={below:$D$}] (D)
+          -- (0,\b) coordinate[label={above:$C$}] (C);
+        \coordinate[label={below right:$S(p,q)$}] (O) at (0,0);
+        \node[dot,label={below:$F_1$}] (F1) at ({-sqrt(\a*\a-\b*\b)},0) {};
+        \node[dot,label={below:$F_2$}] (F2) at ({+sqrt(\a*\a-\b*\b)},0) {};
+        \node[dot,label={\angle:$X$}] (X) at (\angle:{\a} and {\b}) {};
+        \draw (F1) -- (X) (X) -- (F2);
+        \draw[decorate,decoration=brace,draw=red] (C) -- (O);
+      \end{tikzpicture}
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
@@ -241,17 +247,85 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Parámetros de la Elipse}
-  \frametitle{Parámetros de la Elipse}
+\begin{frame}{Elementos de la Hipérbola}
+  \frametitle{Elementos de la Hipérbola}
   \begin{table}[]
-    \begin{tabular}{|l|l|}
+    \begin{tabular}{|c|c|c|}
     \hline
-    Ecuación General & $Ax^2 + Cy^2 + Dx + Ey + F = 0$ \\ 
-    & $A = C, A\neq0$ \\ \hline
-    Ecuación canónica & $\frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2} = 1$ \\ \hline
-    Coordenadas del Centro & $(h, k)$ \\ \hline
-    Coordenadas de los Focos & $(h \pm c, k)$, $c = \sqrt{a^2 - b^2}$ \\ \hline
-    Ecuaciones de los ejes & Eje mayor: $y=k$, Eje menor: $x=h$ \\ \hline
+    & Hipérbola de eje horizontal & Hipérbola de eje vertical \\ \hline
+    Ecuación General & $Ax^2 - Cy^2 + Dx + Ey + F = 0$ & $-Ax^2 + Cy^2 + Dx + Ey + F = 0$ \\ 
+    & Con $A$ y $C$ no ambas cero, distinto valor numérico y signos contrarios. & Con $A$ y $C$ no ambas cero, distinto valor numérico y signos contrarios. \\ 
+    & $B = 0$ (Sin rotación de ejes) & $B = 0$ (Sin rotación de ejes) \\ \hline
+    Ecuación canónica & $(x-h)^2/a^2 - (y-k)^2/b^2 = 1$ & $(y-k)^2/b^2 - (x-h)^2/a^2 = 1$ \\ \hline
+    Localización de los focos & $(h \pm c, k)$ & $(h, k \pm c)$ \\ \hline
+    Localización de los vértices & $(h \pm a, k)$ & $(h, k \pm a)$ \\ \hline
+    Ecuación del eje focal & $y=k$ & $x=h$ \\ \hline
+    Semieje focal & $a$ & $a$ \\ \hline
+    Semieje conjugado & $b$ & $b$ \\ \hline
+    Longitud focal & $c$ & $c$ \\ \hline
+    Relación pitagórica & $c^2 = a^2 + b^2$ & $c^2 = a^2 + b^2$ \\ \hline
+    Ecuación de las asinfotas & $y = k \pm \frac{b}{a}(x - h)$ & $x = h \pm \frac{a}{b}(y - k)$ \\ \hline
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+\begin{frame}{Hipérbola}
+  \frametitle{Hipérbola}
+    Una hipérbola es el conjunto de todos los puntos en un plano cuya diferencia de distancias a dos puntos fijos en el plano es una constante. 
+    Los puntos fijos son los focos de la hipérbola. La recta que une los focos es el eje focal. El punto sobre el eje focal que está en el 
+    punto medio entre los dos focos es el centro. Los puntos donde la hipérbola interseca a su eje son los vértices de la hipérbola.
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \begin{tikzpicture}[dot/.style={draw,fill,circle,inner sep=1pt}]
+          \def\a{4}
+          \def\b{3}
+          \def\angle{-45}
+          \draw plot[domain=-2:2] ({\a*cosh(\x)}, {\b*sinh(\x)});
+          \draw plot[domain=-2:2] ({-\a*cosh(\x)}, {\b*sinh(\x)});
+          \draw (-\a,0) coordinate[label={left:$A$}] (A)
+            -- (\a,0) coordinate[label={right:$B$}] (B);
+          \draw (0,-\b) coordinate[label={below:$D$}] (D)
+            -- (0,\b) coordinate[label={above:$C$}] (C);
+          \coordinate[label={below right:$S(p,q)$}] (O) at (0,0);
+          \node[dot,label={below:$F_1$}] (F1) at ({-sqrt(\a*\a+\b*\b)},0) {};
+          \node[dot,label={below:$F_2$}] (F2) at ({+sqrt(\a*\a+\b*\b)},0) {};
+          \node[dot,label={\angle:$X$}] (X) at (\angle:{\a} and {\b}) {};
+          \draw (F1) -- (X) (X) -- (F2);
+          \draw[decorate,decoration=brace,draw=red] (C) -- (O);
+        \end{tikzpicture}
+        \caption{Hipérbola y sus elementos}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Eje Transverso: es el segmento que pasa por los focos y los vértices de la hipérbola
+        \item Eje Conjugado: es el segmento perpendicular al eje transverso en el centro de la hipérbola
+        \item Focos (F): son los dos puntos fijos en la definición de la hipérbola
+        \item Vértices (V): son los puntos donde el eje transverso corta la hipérbola
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Elementos de la Hipérbola}
+  \frametitle{Elementos de la Hipérbola}
+  \begin{table}[]
+    \begin{tabular}{|c|c|c|}
+    \hline
+    & Hipérbola de eje horizontal & Hipérbola de eje vertical \\ \hline
+    Ecuación General & $Ax^2 - Cy^2 + Dx + Ey + F = 0$ & $-Ax^2 + Cy^2 + Dx + Ey + F = 0$ \\ 
+    & Con $A$ y $C$ no ambas cero, distinto valor numérico y signos contrarios. & Con $A$ y $C$ no ambas cero, distinto valor numérico y signos contrarios. \\ 
+    & $B = 0$ (Sin rotación de ejes) & $B = 0$ (Sin rotación de ejes) \\ \hline
+    Ecuación canónica & $(x-h)^2/a^2 - (y-k)^2/b^2 = 1$ & $(y-k)^2/b^2 - (x-h)^2/a^2 = 1$ \\ \hline
+    Localización de los focos & $(h \pm c, k)$ & $(h, k \pm c)$ \\ \hline
+    Localización de los vértices & $(h \pm a, k)$ & $(h, k \pm a)$ \\ \hline
+    Ecuación del eje focal & $y=k$ & $x=h$ \\ \hline
+    Semieje focal & $a$ & $a$ \\ \hline
+    Semieje conjugado & $b$ & $b$ \\ \hline
+    Longitud focal & $c$ & $c$ \\ \hline
+    Relación pitagórica & $c^2 = a^2 + b^2$ & $c^2 = a^2 + b^2$ \\ \hline
+    Ecuación de las asinfotas & $y = k \pm \frac{b}{a}(x - h)$ & $x = h \pm \frac{a}{b}(y - k)$ \\ \hline
     \end{tabular}
   \end{table}
 \end{frame}
