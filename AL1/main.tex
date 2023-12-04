@@ -42,21 +42,65 @@
 
   \begin{example}
     \begin{itemize}
-        \item $q = x^2 - y^2 + 4xy$ and $q = x^2 + 3y^2 - 2xy$ are quadratic forms in $x$ and $y$.
-        \item $q = -4x_{21} + x_{22}^2 + 4x_{23} + 6x_{1}x_{3}$ is a quadratic form in $x_{1}, x_{2}$ and $x_{3}$.
-        \item The most general quadratic form in $x_{1}, x_{2}, x_{3}$ is $a_{1}x_{21} + a_{2}x_{22}^2 + a_{3}x_{23} + a_{12}x_{1}x_{2} + a_{13}x_{1}x_{3} + a_{23}x_{2}x_{3}$.
+        \item $q = x^2 - y^2 + 4xy$ and $q = x^2 + 3y^2 - 2xy$ son formas cuadraticas en $x$ y $y$.
+        \item $q = -4x_{21} + x_{22}^2 + 4x_{23} + 6x_{1}x_{3}$ es una forma cuadratica en $x_{1}, x_{2}$ y $x_{3}$.
+        \item La formas cuadratica general de $x_{1}, x_{2}, x_{3}$ es $a_{1}x_{21} + a_{2}x_{22}^2 + a_{3}x_{23} + a_{12}x_{1}x_{2} + a_{13}x_{1}x_{3} + a_{23}x_{2}x_{3}$.
     \end{itemize}
   \end{example}
 \end{frame}
 
-\begin{frame}[fragile]{Formas cuadraticas}
-    \frametitle{A}
-    \lipsum[1-1]
+\begin{frame}{Formas cuadraticas}
+  \frametitle{Formas cuadraticas}
+  Las formas cuadraticas pueden ser escritas de la forma matricial $q(x) = x^{T}Ax$ donde $A$ es una matriz simetrica $n 
+  \times n$ y $x$ es un vector columna $n \times 1$.
+
+  La matriz $A$ es llamada la matriz de la forma cuadratica $q$.
+
+  % Suppose q = x2
+  % 1 − x2
+  % 2 + 4x1x2. The coefficients of x2
+  % 1 and x2
+  % 2 are 1 and −1,
+  % respectively, so we put these, in order, into the two diagonal positions of a
+  % matrix A. The coefficient of x1x2 is 4, which we split equally between the
+  % (1, 2) and (2, 1) positions, putting a 2 in each place.
+  % traduce lo de arriba y ponlo como ejemplo
+  \begin{example}
+    Supongamos que $q = x_1^2 - x_2^2 + 4x_1x_2$. Los coeficientes de $x_1^2$ y $x_2^2$ son 1 y -1, 
+    respectivamente, por lo que colocamos estos, en orden, en las dos posiciones diagonales de una matriz A. 
+    El coeficiente de $x_1x_2$ es 4, que dividimos equitativamente entre las posiciones (1, 2) y (2, 1), 
+    colocando un 2 en cada lugar.
+  \end{example}
 \end{frame}
 
-\begin{frame}{2}
-    \frametitle{A}
-    \lipsum[1-1]
+\begin{frame}{Formas cuadraticas}
+  \frametitle{Formas cuadraticas}
+  Asi tenemos que:
+  \begin{equation*}
+    A = \begin{bmatrix}
+      1 & 2 \\
+      2 & -1
+    \end{bmatrix}
+  \end{equation*}
+  y x = $\begin{bmatrix}
+    x_1 \\
+    x_2
+  \end{bmatrix}$
+  Luego:
+  \begin{equation*}
+    q(x) = x^{T}Ax = \begin{bmatrix}
+      x_1 & x_2
+    \end{bmatrix}
+    \begin{bmatrix}
+      1 & 2 \\
+      2 & -1
+    \end{bmatrix}
+    \begin{bmatrix}
+      x_1 \\
+      x_2
+    \end{bmatrix}
+    = x_1^2 - x_2^2 + 4x_1x_2
+  \end{equation*}
 \end{frame}
 
 \begin{frame}{3}
