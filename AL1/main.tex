@@ -209,6 +209,13 @@
   \end{columns}
 \end{frame}
 
+\begin{frame}{Idea para clasificar cónicas}
+  \frametitle{Idea para clasificar cónicas}
+  \begin{figure}
+    \includegraphics[width=\textwidth, height=\textheight, keepaspectratio]{images/red.png}
+  \end{figure}
+\end{frame}
+
 \begin{frame}{Giro o eliminación del término cruzado - Parte 1}
   \frametitle{Giro o eliminación del término cruzado}
   Cónica en la referencia inicial:
@@ -293,7 +300,7 @@
     \hline
     & $|A| > 0$ & $|A| = 0$ & $|A| < 0$ \\ \hline
     $T > 0$ & Elipse imaginaria & Rectas imaginarias cortándose & Elipse real \\ \hline
-    $T = 0$ & Parábola, $rg(A) = 2$ & \begin{tabular}[c]{@{}c@{}}Rectas paralelas imag.\\ Rectas paralelas reales\end{tabular} & Recta doble, Parábola \\ \hline
+    $T = 0$ & Parábola, $rg(A) = 2$ & $\begin{aligned} &\text{rg(A) = 2} \\ &\{\text{Rectas paralelas imag.} \\ &\text{Rectas paralelas reales}\} \\ &\text{rg(A) = 1 Recta doble} \end{aligned}$ & Recta doble, Parábola \\ \hline
     $T < 0$ & Hipérbola & Rectas reales cortándose & Hipérbola \\ \hline
     \end{tabular}
   \end{table}
@@ -345,7 +352,6 @@
 
 \begin{frame}{Ecuaciones reducidas, foco, directriz y excentricidad de la parábola}
   \frametitle{Ecuaciones reducidas, foco, directriz y excentricidad de la parábola}
-  \begin{block}{Ecuaciones}
     Ecuación reducida de la parábola:
     \[\lambda_1x'^2 - 2dy' = 0\]
     con $\lambda_1$ autovalor no nulo de T y $d = +\sqrt{-\frac{det(A)}{\lambda_1}}$.
@@ -365,7 +371,6 @@
     Directriz: Recta polar del foco $F = (s, t)$: $\begin{pmatrix} s & t & 1 \end{pmatrix} \begin{pmatrix} x \\ y \\ 1 \end{pmatrix} = 0$
     
     Excentricidad: $e = 1$
-  \end{block}
 \end{frame}
 
 \begin{frame}{Elipse}
@@ -414,7 +419,6 @@
 
 \begin{frame}{Ecuaciones reducidas, focos, directrices y excentricidad de la elipse}
   \frametitle{Ecuaciones reducidas, focos, directrices y excentricidad de la elipse}
-  \begin{block}{Ecuaciones}
     Ecuación reducida de la elipse:
     \[\lambda_1x'^2 + \lambda_2y'^2 + d = 0\]
     con $\lambda_1, \lambda_2 > 0$ autovalores de T, ordenados de forma que $\lambda_2 \geq \lambda_1$ y $d = \frac{det(A)}{det(T)}$.
@@ -432,7 +436,6 @@
     Directrices: Rectas polares de los focos $F_i = (s_i, t_i)$: $\begin{pmatrix} s_i & t_i & 1 \end{pmatrix} \begin{pmatrix} x \\ y \\ 1 \end{pmatrix} = 0$
     
     Excentricidad: $e = \frac{c}{a} < 1$
-  \end{block}
 \end{frame}
 
 \begin{frame}{Hipérbola}
@@ -482,7 +485,6 @@
 
 \begin{frame}{Ecuaciones reducidas, focos, directrices y excentricidad de la hipérbola}
   \frametitle{Ecuaciones reducidas, focos, directrices y excentricidad de la hipérbola}
-  \begin{block}{Ecuaciones}
     Ecuación reducida de la hipérbola:
     \[\lambda_1x'^2 + \lambda_2y'^2 + d = 0\]
     con $\lambda_1, \lambda_2$ autovalores de T, ordenados de forma que $signo(\lambda_1) = signo(det(A))$ y $d = \frac{det(A)}{det(T)}$.
@@ -500,7 +502,6 @@
     Directrices: Rectas polares de los focos $F_i = (s_i, t_i)$: $\begin{pmatrix} s_i & t_i & 1 \end{pmatrix} \begin{pmatrix} x \\ y \\ 1 \end{pmatrix} = 0$
     
     Excentricidad: $e = \frac{c}{a} > 1$
-  \end{block}
 \end{frame}
 
 \section{Ejercicios}
@@ -672,6 +673,13 @@
     El eje focal o eje mayor de la elipse es el eje $O''x''$. La ecuación del cambio de coordenadas de la referencia $R''$ a la referencia canónica es
     \[\begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 1 \\ -1 \end{pmatrix} + \begin{pmatrix} \sqrt{2}/2 & \sqrt{2}/2 \\ -\sqrt{2}/2 & \sqrt{2}/2 \end{pmatrix} \begin{pmatrix} x'' \\ y'' \end{pmatrix}.\]
     Los vértices A y B de C son los puntos de coordenadas $(2, 0)$ y $(0, \sqrt{2})$ en $R''$ y los focos $F_1$ y $F_2$ son los puntos de coordenadas $(\sqrt{2}, 0)$ y $(-\sqrt{2}, 0)$ en $R''$. Por tanto, $A = (1 + \sqrt{2}, -1 - \sqrt{2}), B = (2, 0), F_1 = (2, -2)$ y $F_2 = (0, 0) = O$.
+\end{frame}
+
+\begin{frame}{Ejercicio 3: Continuación}
+  \frametitle{Ejercicio 3: Continuación}
+  \begin{figure}
+    \includegraphics[width=\textwidth, height=\textheight, keepaspectratio]{images/ej3.png}
+  \end{figure}
 \end{frame}
 
 \section{Bibliografía}
