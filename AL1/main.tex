@@ -208,73 +208,75 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Giro o eliminación del término cruzado}
+\begin{frame}{Giro o eliminación del término cruzado - Parte 1}
   \frametitle{Giro o eliminación del término cruzado}
-
+  Cónica en la referencia inicial:
   \begin{equation*}
-    a_{11}x^2 + 2a_{12}xy + a_{22}y^2 + 2a_{13}x + 2a_{23}y + a_{33} = 0
+    a_{11}x^2 + \textcolor{red}{2a_{12}xy} + a_{22}y^2 + 2a_{13}x + 2a_{23}y + a_{33} = 0
+  \end{equation*}
+  \begin{equation*}
+    \begin{pmatrix} x & y \end{pmatrix} A \begin{pmatrix} x \\ y \end{pmatrix} + 2\begin{pmatrix} a_{13} & a_{23} \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} + a_{33} = 0
+  \end{equation*}
+  
+  \begin{block}{Teorema}
+    \begin{equation*}
+      T \text{ is symmetric } \Rightarrow \exists P \text{ such that } P^{-1} = P^T \text{ and } P^T T P = D = \begin{bmatrix} \lambda_1 & 0 \\ 0 & \lambda_2 \end{bmatrix} \text{ is diagonal}    
+    \end{equation*}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Giro o eliminación del término cruzado - Parte 2}
+  Cambio de referencia:
+  \begin{equation*}
+    \begin{pmatrix} x' \\ y' \end{pmatrix} = P \begin{pmatrix} x \\ y \end{pmatrix}
   \end{equation*}
 
-  Cónica en la referencia inicial: "Eliminar el término cruzado"
-
   \begin{equation*}
-    (xy)^T A (x) + 2(a_{13} a_{23})^T (x) + a_{33} = 0
-  \end{equation*}
-
-  Autovectores de $T$ ortonormales, Autovalores de $T$
-
-  \begin{equation*}
-    T \text{ es simétrica } \exists P \text{ con } P^{-1} = P^t | P^t T P = P^{-1} T P = D = \begin{bmatrix} \lambda_1 & 0 \\ 0 & \lambda_2 \end{bmatrix} \text{ diagonal}
-  \end{equation*}
-
-  Cambio de referencia: $(x', y') = P(x)$ Conserva distancias. Importante para NO deformar la cónica
-
-  \begin{equation*}
-    (x' y') P^t T P (x) + 2(a_{13} a_{23}) P(x) + a_{33} = 0
+    \begin{pmatrix} x' & y' \end{pmatrix} P^T T P \begin{pmatrix} x \\ y \end{pmatrix} + 2\begin{pmatrix} a_{13} & a_{23} \end{pmatrix} P \begin{pmatrix} x \\ y \end{pmatrix} + a_{33} = 0
   \end{equation*}
 
   \begin{equation*}
-    (x' y') D (x) + 2(a_{13} a_{23}) P(x) + a_{33} = 0
+      \begin{pmatrix} x' & y' \end{pmatrix} D \begin{pmatrix} x \\ y \end{pmatrix} + 2\begin{pmatrix} a_{13} & a_{23} \end{pmatrix} P \begin{pmatrix} x \\ y \end{pmatrix} + a_{33} = 0
   \end{equation*}
 
   Cónica en nueva referencia:
-
   \begin{equation*}
     \lambda_1x'^2 + \lambda_2y'^2 + 2b_{13}x' + 2b_{23}y' + a_{33} = 0
   \end{equation*}
 \end{frame}
 
-\begin{frame}{Traslación o eliminación de la parte lineal}
+\begin{frame}{Traslación o eliminación de la parte lineal - Part 1}
   \frametitle{Traslación o eliminación de la parte lineal}
 
-  Cambio de referencia: Conserva distancias
+  Cambio de referencia:
+
+  \begin{equation*}
+    \begin{pmatrix} x' \\ y' \end{pmatrix} = P \begin{pmatrix} x \\ y \end{pmatrix}
+  \end{equation*}
 
   Completar cuadrados:
 
-  \begin{equation*}
-    \lambda_1x'^2 + \lambda_2y'^2 + 2b_{13}x' + 2b_{23}y' + a_{33} = 0
-  \end{equation*}
+  \begin{align*}
+    \lambda_{11}x'^2 + 2b_{11}x' &= \lambda_{11}x'^2 + 2b_{11}x' - \frac{b_{11}^2}{4\lambda_{11}} \\
+    \lambda_{22}y'^2 + 2b_{21}y' &= \lambda_{22}y'^2 + 2b_{21}y' - \frac{b_{21}^2}{4\lambda_{22}} \\
+  \end{align*}
+\end{frame}
+
+\begin{frame}{Traslación o eliminación de la parte lineal - Part 2}
+  \frametitle{Traslación o eliminación de la parte lineal}
 
   \begin{equation*}
-    (x + a)^2 = x^2 + 2ax + a^2
-  \end{equation*}
-
-  \begin{equation*}
-    \lambda_1(x' + \frac{b_{13}}{2\lambda_1})^2 + \lambda_2(y' + \frac{b_{23}}{2\lambda_2})^2 + a_{33} = 0
-  \end{equation*}
-
-  \begin{equation*}
-    \lambda_1x''^2 + \lambda_2y''^2 + d = 0 \quad \text{(traslación)}
+    \lambda_{11}x' - \frac{b_{11}^2}{4\lambda_{11}} + \lambda_{22}y' - \frac{b_{21}^2}{4\lambda_{22}} + a_{33} = 0
   \end{equation*}
 
   Cambio de referencia:
 
   \begin{equation*}
-    (x'', y'') = \left(x' - \frac{b_{13}}{\lambda_1}, y' - \frac{b_{23}}{\lambda_2}\right)
+    \begin{pmatrix} x'' \\ y'' \end{pmatrix} = \begin{pmatrix} x' \\ y' \end{pmatrix} - \begin{pmatrix} \frac{b_{11}}{2\lambda_{11}} \\ \frac{b_{21}}{2\lambda_{22}} \end{pmatrix}
   \end{equation*}
 
   \begin{equation*}
-    \lambda_1x''^2 + \lambda_2y''^2 + d = 0
+    \lambda_{11}x''^2 + \lambda_{22}y''^2 + a_{33} - \frac{b_{11}^2}{4\lambda_{11}} - \frac{b_{21}^2}{4\lambda_{22}} = 0
   \end{equation*}
 \end{frame}
 
