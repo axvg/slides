@@ -1,10 +1,11 @@
 \documentclass[xcolor={dvipsnames},aspectratio=169,10pt]{beamer}
 
 \input{preamble.tex}
+\begin{document}
 
 \title{Obtención de los Coeficientes de la forma canónica para la Elipse, hipérbolas y parábolas}
 \subtitle{Determinación analítica de las cónicas}
-\author{Grupo 12}
+\author{Grupo 8}
 \date{December 05, 2023}
 \titlegraphic{
   \begin{tikzpicture}[overlay, remember picture]
@@ -21,9 +22,11 @@
   \end{tikzpicture}
 }
 
-\begin{document}
-
 \maketitle%
+
+\begin{frame}
+\epigraph{``Sigue intentando. Sigue intentando. Incurre en todos los errores posibles. Simplemente sigue intentando''}{-René Descartes}
+\end{frame}
 
 \begin{frame}{Contenidos}
   \setbeamertemplate{section in toc}[sections numbered]
@@ -56,12 +59,12 @@
 
   La matriz $A$ es llamada la matriz de la forma cuadrática $q$.
 
-  \begin{example}
+  \begin{block}{Ejemplos}
     Supongamos que $q = x_1^2 - x_2^2 + 4x_1x_2$. Los coeficientes de $x_1^2$ y $x_2^2$ son 1 y -1, 
     respectivamente, por lo que colocamos estos, en orden, en las dos posiciones diagonales de una matriz A. 
     El coeficiente de $x_1x_2$ es 4, que dividimos equitativamente entre las posiciones (1, 2) y (2, 1), 
     colocando un 2 en cada lugar.
-  \end{example}
+  \end{block}
 \end{frame}
 
 \begin{frame}{Formas cuadráticas}
