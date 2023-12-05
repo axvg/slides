@@ -34,19 +34,19 @@
 
 \begin{frame}{Formas cuadráticas}
     \frametitle{Formas cuadráticas}
-    \begin{definition}
+    \begin{block}{Definición}
       Una forma cuadrática en n variables $x_{1}, x_{2}, . . . , x_{n}$ es una combinación lineal de los
       productos $x_{i} x_{j}$, esto es, una combinación lineal de cuadrados $x_{1}^2 , x_{2}^2 , . . . , x_{n}^2$ y
       términos $x_{1}x_{2}, x_{1}x_{3}, . . . , x_{1}x_{n}, x_{2}x_{3}, . . . , x_{2}x_{n}, . . . , x_{n-1}x_{n}$
-    \end{definition}
+    \end{block}
 
-  \begin{example}
+  \begin{block}{Ejemplos}
     \begin{itemize}
         \item $q = x^2 - y^2 + 4xy$ y $q = x^2 + 3y^2 - 2xy$ son formas cuadráticas en $x$ y $y$.
         \item $q = -4x_{21} + x_{22}^2 + 4x_{23} + 6x_{1}x_{3}$ es una forma cuadrática en $x_{1}, x_{2}$ y $x_{3}$.
         \item La forma cuadrática general de $x_{1}, x_{2}, x_{3}$ es $a_{1}x_{21} + a_{2}x_{22}^2 + a_{3}x_{23} + a_{12}x_{1}x_{2} + a_{13}x_{1}x_{3} + a_{23}x_{2}x_{3}$.
     \end{itemize}
-  \end{example}
+  \end{block}
 \end{frame}
 
 \begin{frame}{Formas cuadráticas}
@@ -655,11 +655,11 @@
 
 \begin{frame}{Ejercicio 3: Continuación}
   \frametitle{Ejercicio 3: Continuación}
-    Por el teorema espectral, la matriz simétrica A es diagonalizable y existe una matriz de paso ortogonal. Para calcular una matriz de paso P ortogonal calculamos el polinomio característico de A,
+    Por el teorema visto, la matriz simétrica A es diagonalizable y existe una matriz de paso ortogonal. Para calcular una matriz de paso P ortogonal calculamos el polinomio característico de A,
     \[P_T(X) = \begin{vmatrix} 3 - X & 1 \\ 1 & 3 - X \end{vmatrix} = X^2 - 6X + 8 = (X - 2)(X - 4).\]
     Los autovalores de T son $\lambda_1 = 2$ y $\lambda_2 = 4$. Los subespacios propios asociados a los autovalores son
     \[V_2 = Nuc (f - 2 id_{R^3}) = \langle(1, -1)\rangle, V_4 = Nuc (f - 4 id_{R^3}) = \langle(1, 1)\rangle,\]
-    donde f es el endomorfismo de $R^2$ cuya matriz asociada en la base canónica es A. La matriz
+    . La matriz
     \[P = \begin{pmatrix} \sqrt{2}/2 & \sqrt{2}/2 \\ -\sqrt{2}/2 & \sqrt{2}/2 \end{pmatrix}\]
     es una matriz ortogonal y verifica $P^T T P = diag (2, 4)$. La base
     \[A = (v_1 = (\sqrt{2}/2, -\sqrt{2}/2), v_2 = (\sqrt{2}/2, \sqrt{2}/2))\]
@@ -701,8 +701,8 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}[standout]
-  Gracias \\
-\end{frame}
+% \begin{frame}[standout]
+%   Gracias \\
+% \end{frame}
 
 \end{document}
