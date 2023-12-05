@@ -168,6 +168,43 @@
   \end{itemize}
 \end{frame}
 
+\begin{frame}{Idea para clasificar cónicas}
+  \frametitle{Idea para clasificar cónicas}
+  
+  \begin{columns}
+    \column{0.4\textwidth}
+    Ecuación en la referencia inicial:
+    \begin{equation*}
+      a_{11}x^2 + 2a_{12}xy + a_{22}y^2 + 2a_{13}x + 2a_{23}y + a_{33} = 0
+    \end{equation*}
+    \begin{equation*}
+      A = \begin{bmatrix}
+        a_{11} & a_{12} & a_{13} \\
+        a_{12} & a_{22} & a_{23} \\
+        a_{13} & a_{23} & a_{33}
+      \end{bmatrix}
+    \end{equation*}
+
+    \column{0.2\textwidth}
+    \centering
+    \fcolorbox{black}{white}{\parbox{0.2\textwidth}{\centering CAMBIO DE REFERENCIA}}
+
+    \column{0.4\textwidth}
+    Ecuación en la nueva referencia:
+    \begin{equation*}
+      \lambda_1u^2 + \lambda_2v^2 + [d, e] [u, v] [u, v]^T + f = 0
+    \end{equation*}
+
+    \begin{equation*}
+      A' = \begin{bmatrix}
+        \lambda_1 & 0 & 0 \\
+        0 & \lambda_2 & 0 \\
+        0 & 0 & d
+      \end{bmatrix}
+    \end{equation*}
+  \end{columns}
+\end{frame}
+
 \begin{frame}{Parábola}
   \frametitle{Parábola}
   Una parábola es el lugar geométrico de un punto que se mueve en un plano de tal manera que su distancia a una recta fija, llamada directriz, situada en el mismo plano, 
