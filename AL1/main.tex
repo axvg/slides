@@ -253,11 +253,11 @@
   \end{equation*}
 \end{frame}
 
-\begin{frame}{Traslación o eliminación de la parte lineal - Part 1}
+\begin{frame}{Traslación o eliminación de la parte lineal - Parte 1}
   \frametitle{Traslación o eliminación de la parte lineal}
   Ecuacion hasta ahora:
   \begin{equation*}
-    \boxed{\lambda_1x'^2 + \lambda_2y'^2 + 2b_{13}x' + 2b_{23}y' + a_{33} = 0}
+    \boxed{\lambda_1x'^2 + \lambda_2y'^2 + \textcolor{red}{2b_{13}x'} + \textcolor{red}{2b_{23}y'} + a_{33} = 0}
   \end{equation*}
 
   Completando cuadrados:
@@ -276,7 +276,7 @@
 
 \end{frame}
 
-\begin{frame}{Traslación o eliminación de la parte lineal - Part 2}
+\begin{frame}{Traslación o eliminación de la parte lineal - Parte 2}
   \frametitle{Traslación o eliminación de la parte lineal}
 
   Cambio de referencia (traslación):
@@ -350,15 +350,18 @@
   \end{table}
 \end{frame}
 
-\begin{frame}{Ecuaciones reducidas, foco, directriz y excentricidad de la parábola}
-  \frametitle{Ecuaciones reducidas, foco, directriz y excentricidad de la parábola}
+\begin{frame}{Ecuaciones reducidas, foco, directriz y excentricidad de la parábola - Parte 1}
+  \frametitle{Ecuaciones reducidas, foco, directriz y excentricidad de la parábola - Parte 1}
     Ecuación reducida de la parábola:
     \[\lambda_1x'^2 - 2dy' = 0\]
     con $\lambda_1$ autovalor no nulo de T y $d = +\sqrt{-\frac{det(A)}{\lambda_1}}$.
     
     Ecuación de cambio de referencia:
-    \[\begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} \text{vértice} \end{pmatrix} + \begin{pmatrix} \text{autovec1} \\ \text{autovec2} \end{pmatrix} \begin{pmatrix} x' \\ y' \end{pmatrix}.\]
-    
+    \[\begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} \text{vertice} \end{pmatrix} + \begin{pmatrix} \text{autovec1} \\ \text{autovec2} \end{pmatrix} \begin{pmatrix} x' \\ y' \end{pmatrix}.\]
+  \end{frame}
+
+\begin{frame}{Ecuaciones reducidas, foco, directriz y excentricidad de la parábola - Parte 2}
+  \frametitle{Ecuaciones reducidas, foco, directriz y excentricidad de la parábola - Parte 2}
     Hay que orientar el autovector asociado al 0 de forma que $\begin{pmatrix} a_{13} & a_{23} \end{pmatrix} \begin{pmatrix} \text{autovec2} \end{pmatrix} < 0$.
     
     Ecuación canónica:
@@ -417,15 +420,18 @@
   \end{table}
 \end{frame}
 
-\begin{frame}{Ecuaciones reducidas, focos, directrices y excentricidad de la elipse}
-  \frametitle{Ecuaciones reducidas, focos, directrices y excentricidad de la elipse}
+\begin{frame}{Ecuaciones reducidas, focos, directrices y excentricidad de la elipse - Parte 1}
+  \frametitle{Ecuaciones reducidas, focos, directrices y excentricidad de la elipse - Parte 1}
     Ecuación reducida de la elipse:
     \[\lambda_1x'^2 + \lambda_2y'^2 + d = 0\]
     con $\lambda_1, \lambda_2 > 0$ autovalores de T, ordenados de forma que $\lambda_2 \geq \lambda_1$ y $d = \frac{det(A)}{det(T)}$.
     
     Ecuación de cambio de referencia:
     \[\begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} \text{centro} \end{pmatrix} + \begin{pmatrix} \text{autovec1} \\ \text{autovec2} \end{pmatrix} \begin{pmatrix} x' \\ y' \end{pmatrix}.\]
-    
+\end{frame}
+
+\begin{frame}{Ecuaciones reducidas, focos, directrices y excentricidad de la elipse - Parte 2}
+  \frametitle{Ecuaciones reducidas, focos, directrices y excentricidad de la elipse - Parte 2}
     Ecuación canónica:
     \[\frac{x'^2}{a^2} + \frac{y'^2}{b^2} = 1\]
     
@@ -483,15 +489,18 @@
   \end{table}
 \end{frame}
 
-\begin{frame}{Ecuaciones reducidas, focos, directrices y excentricidad de la hipérbola}
-  \frametitle{Ecuaciones reducidas, focos, directrices y excentricidad de la hipérbola}
+\begin{frame}{Ecuaciones reducidas, focos, directrices y excentricidad de la hipérbola - Parte 1}
+  \frametitle{Ecuaciones reducidas, focos, directrices y excentricidad de la hipérbola - Parte 1}
     Ecuación reducida de la hipérbola:
     \[\lambda_1x'^2 + \lambda_2y'^2 + d = 0\]
     con $\lambda_1, \lambda_2$ autovalores de T, ordenados de forma que $signo(\lambda_1) = signo(det(A))$ y $d = \frac{det(A)}{det(T)}$.
     
     Ecuación de cambio de referencia:
     \[\begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} \text{centro} \end{pmatrix} + \begin{pmatrix} \text{autovec1} \\ \text{autovec2} \end{pmatrix} \begin{pmatrix} x' \\ y' \end{pmatrix}.\]
-    
+  \end{frame}
+
+\begin{frame}{Ecuaciones reducidas, focos, directrices y excentricidad de la hipérbola - Parte 2}
+  \frametitle{Ecuaciones reducidas, focos, directrices y excentricidad de la hipérbola - Parte 2}
     Ecuación canónica:
     \[\frac{x'^2}{a^2} - \frac{y'^2}{b^2} = 1\]
     
